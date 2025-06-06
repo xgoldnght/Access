@@ -1,4 +1,4 @@
-# ACCESS $ SQL SERVER
+# ACCESS & SQL SERVER
 
 ![Меню](https://github.com/xgoldnght/Access/blob/ACCESS-%26-SQL-SERVER/app/Безымянный.png)
 
