@@ -1,85 +1,30 @@
-# SQL Server
-```sql
--- Создание базы данных
-CREATE DATABASE HotelSystem;
-GO
-```
+# ACCESS $ SQL SERVER
 
-```sql
--- Использование базы данных
-USE HotelSystem;
-GO
-```
+![Меню](https://github.com/xgoldnght/Access/blob/ACCESS-%26-SQL-SERVER/app/Безымянный.png)
 
-```sql
--- Таблица пользователей
-CREATE TABLE users (
-    id_user INT IDENTITY(1,1) PRIMARY KEY,
-    login NVARCHAR(50),
-    password NVARCHAR(255),
-    access_level NVARCHAR(50),
-    login_attempts INT,
-    is_blocked BIT DEFAULT 0,
-    last_auth_date DATE DEFAULT GETDATE(),
-    account_confirmed BIT DEFAULT 0
-);
-```
+![Меню](https://github.com/xgoldnght/Access/blob/ACCESS-%26-SQL-SERVER/app/Безымянный2.png)
 
-```sql
--- Таблица сотрудников
-CREATE TABLE employees (
-    id_employee INT IDENTITY(1,1) PRIMARY KEY,
-    full_name NVARCHAR(100),
-    phone NVARCHAR(20),
-    id_user INT FOREIGN KEY REFERENCES users(id_user),
-    hire_date DATE,
-    dismissal_date DATE
-);
-```
+![Меню](https://github.com/xgoldnght/Access/blob/ACCESS-%26-SQL-SERVER/app/Безымянный3.png)
 
-```sql
--- Таблица клиентов
-CREATE TABLE clients (
-    id_client INT IDENTITY(1,1) PRIMARY KEY,
-    full_name NVARCHAR(100),
-    phone NVARCHAR(20),
-    id_user INT FOREIGN KEY REFERENCES users(id_user)
-);
-```
+![Меню](https://github.com/xgoldnght/Access/blob/ACCESS-%26-SQL-SERVER/app/Безымянный4.png)
 
-```sql
--- Таблица номеров
-CREATE TABLE rooms (
-    id_room INT IDENTITY(1,1) PRIMARY KEY,
-    floor INT,
-    room_number NVARCHAR(10),
-    category NVARCHAR(50),
-    status NVARCHAR(50)
-);
-```
+![Меню](https://github.com/xgoldnght/Access/blob/ACCESS-%26-SQL-SERVER/app/Безымянный5.png)
 
-```sql
--- Таблица оплат
-CREATE TABLE payments (
-    id_payment INT IDENTITY(1,1) PRIMARY KEY,
-    id_client INT FOREIGN KEY REFERENCES clients(id_client),
-    price DECIMAL(10, 2),
-    payment_date DATE
-);
-```
+![Меню](https://github.com/xgoldnght/Access/blob/ACCESS-%26-SQL-SERVER/app/Безымянный6.png)
 
-```sql
--- Таблица бронирований
-CREATE TABLE bookings (
-    id_booking INT IDENTITY(1,1) PRIMARY KEY,
-    id_client INT FOREIGN KEY REFERENCES clients(id_client),
-    id_room INT FOREIGN KEY REFERENCES rooms(id_room),
-    check_in_date DATE,
-    check_out_date DATE
-);
-```
+![Меню](https://github.com/xgoldnght/Access/blob/ACCESS-%26-SQL-SERVER/app/Безымянный7.png)
+# ВЫБИРАЕМ НАШУ БАЗУ ДАННЫХ
+![Меню](https://github.com/xgoldnght/Access/blob/ACCESS-%26-SQL-SERVER/app/Безымянный8.png)
 
+![Меню](https://github.com/xgoldnght/Access/blob/ACCESS-%26-SQL-SERVER/app/Безымянный9.png)
 
+![Меню](https://github.com/xgoldnght/Access/blob/ACCESS-%26-SQL-SERVER/app/Безымянный10.png)
+# МОЖНО ПРОВЕРИТЬ ИСТОЧНИК ДАННЫХ НА НАЛИЧИЕ СОЕДИНЕНИЯ
+![Меню](https://github.com/xgoldnght/Access/blob/ACCESS-%26-SQL-SERVER/app/Безымянный11.png)
+# ВЫБИРАЕМ НАШ СОЗДАННЫЙ ИСТОЧНИК ДАННЫХ
+![Меню](https://github.com/xgoldnght/Access/blob/ACCESS-%26-SQL-SERVER/app/Безымянный12.png)
+
+![Меню](https://github.com/xgoldnght/Access/blob/ACCESS-%26-SQL-SERVER/app/Безымянный13.png)
 
 
 
