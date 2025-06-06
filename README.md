@@ -1,5 +1,7 @@
 # CodeAccess
-# ФОРМА АВТОРИЗАЦИЯ
+
+```vba
+ФОРМА АВТОРИЗАЦИЯ
 Private Sub Form_Load()
     Dim conn As Object
     Dim rs As Object
@@ -136,7 +138,9 @@ Private Sub Выход_Click()
         DoCmd.Quit
     End If
 End Sub
+```
 
+```vba
 # ФОРМА ГЛАВНОЕ МЕНЮ (ЛЮБОЕ)
 Private Sub Выход_Click()
     Dim ответ As Integer
@@ -159,7 +163,9 @@ Private Sub СменаПользователя_Click()
 
     DoCmd.OpenForm "Авторизация"
 End Sub
+```
 
+```vba
 # ФОРМА СМЕНА ПАРОЛЯ
 Private Sub btnСохранить_Click()
     Dim conn As Object
@@ -225,7 +231,9 @@ Private Sub Form_Close()
     conn.Close
     Set conn = Nothing
 End Sub
+```
 
+```vba
 # ФОРМА РЕДАКТИРОВАНИЕ/ДОБАВЛЕНИЯ ПОЛЬЗОВАТЕЛЯ
 Private Sub login_BeforeUpdate(Cancel As Integer)
     Dim conn As Object
@@ -258,10 +266,23 @@ Private Sub is_blocked_BeforeUpdate(Cancel As Integer)
         Me.login_attempts = 0
     End If
 End Sub
+```
 
+```vba
 # ГЛОБАЛЬНЫЙ МОДУЛЬ
 Public ТекущийЛогин As String
 
 # САМОЕ ГЛАВНОЕ
     strConn = "Provider=SQLOLEDB;Data Source=ИМЯ_СЕРВЕРА;Initial Catalog=ИМЯ_БД;Integrated Security=SSPI;"
 # Не  забывайте менять в этой строчке имя сервера и название вашей базы
+```
+
+
+
+
+
+
+
+
+
+
