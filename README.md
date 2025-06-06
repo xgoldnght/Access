@@ -62,3 +62,15 @@ CREATE TABLE bookings (
     check_in_date DATE,
     check_out_date DATE
 );
+
+
+
+
+
+
+
+
+
+
+
+
